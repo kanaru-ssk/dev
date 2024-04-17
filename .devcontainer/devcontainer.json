@@ -1,0 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+{
+  "name": "dev",
+  "dockerComposeFile": "../compose.yml",
+  "service": "dood",
+  "workspaceFolder": "${localWorkspaceFolder}",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "updateImportsOnFileMove.enabled": "always"
+        },
+        "[svelte]": {
+          "editor.defaultFormatter": "svelte.svelte-vscode",
+          "enable-ts-plugin": true
+        },
+        "[go]": {
+          "editor.defaultFormatter": "golang.go",
+          "useLanguageServer": false,
+          "toolsEnvVars": {
+            "GO111MODULE": "on"
+          }
+        },
+        "[rust]": {
+          "editor.defaultFormatter": "rust-lang.rust-analyzer"
+        },
+        "[cpp]": {
+          "editor.defaultFormatter": "ms-vscode.cpptools"
+        }
+      },
+      "extensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "bradlc.vscode-tailwindcss",
+        "streetsidesoftware.code-spell-checker",
+        "golang.go",
+        "rust-lang.rust-analyzer",
+        "zxh404.vscode-proto3"
+      ]
+    }
+  }
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}

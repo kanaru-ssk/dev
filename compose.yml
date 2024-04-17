@@ -1,0 +1,12 @@
+services:
+  dood:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - HOST_PWD=$PWD
+    tty: true
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:$PWD:delegated
